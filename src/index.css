@@ -1,0 +1,142 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.title {
+  padding: 0.5rem 0.2rem;
+  text-align: center;
+  /* background-color: rgb(218, 218, 218); */
+}
+body {
+  background-color: hsl(212, 33%, 89%);
+}
+
+.person {
+  padding: 1rem;
+  margin: 0.4rem auto;
+  width: 90vw;
+  background-color: rgb(21, 51, 21);
+  max-width: 600px;
+  display: grid;
+  place-items: center;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 4px 6px 6px grey;
+  margin: 1rem auto;
+}
+.person-img {
+  width: 70%;
+  height: 300px;
+  border-radius: 5px;
+  /* object-fit: contain; */
+  margin-bottom: 0.2rem;
+}
+.person-info {
+  margin-top: 1rem;
+}
+
+#appear {
+  letter-spacing: 4px;
+}
+.naam {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.person-info {
+  width: 300px;
+  right: 0.5rem;
+}
+.occupation {
+  margin: 00.2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+li {
+  list-style-type: none;
+  text-align: left;
+  margin-top: 2px;
+}
+.paginationBtns {
+  display: flex;
+  justify-content: center;
+  width: 70vw;
+  margin: 2rem auto;
+  cursor: pointer;
+  gap: 1rem;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+.paginationBtns a {
+  border: 1px solid green;
+  padding: 00.2rem 0.3rem;
+  border-radius: 2px;
+  color: green;
+  outline: 0;
+}
+.active-btn a {
+  background-color: gray;
+  color: white;
+}
+.paginationActive a {
+  background-color: green;
+  color: white;
+}
+.input {
+  margin: 0.4rem auto;
+  text-align: center;
+}
+.input input {
+  width: 230px;
+  padding-left: 1rem;
+  border-radius: 2px;
+  border: 0;
+  height: 22px;
+}
+.input button {
+  background: rgb(27, 85, 9);
+
+  color: white;
+  border: none;
+  padding: 0.2rem 0.3rem;
+  outline: green;
+  margin-right: 1rem;
+}
+.input button:hover {
+  background: rgb(117, 156, 59);
+}
+
+@media screen and (min-width: 800px) {
+  .person {
+    grid-template-columns: 400px 1fr;
+    justify-content: space-between;
+    place-items: start;
+    position: relative;
+  }
+  .person-info {
+    margin-top: 3rem;
+    position: absolute;
+  }
+  .person-img {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .person-img {
+    width: 70%;
+    height: 270px;
+  }
+  .input input {
+    width: 170px;
+  }
+  .active-btn,
+  .paginationBtns {
+    font-size: 14px;
+  }
+}
